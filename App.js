@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { StyleSheet, Text,Platform, View, KeyboardAvoidingView, TouchableOpacity, TouchableWithoutFeedback,Keyboard,TextInput,Button } from 'react-native';
+import { StyleSheet,ScrollView, Text,Platform, View, KeyboardAvoidingView, TouchableOpacity, TouchableWithoutFeedback,Keyboard,TextInput,Button } from 'react-native';
 import Tasks from './components/Tasks.js'
 
 export default function App() {
@@ -24,23 +24,26 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-              
+              <ScrollView>
               <View style={styles.top}>
               <Text style={styles.title}>Today's tasks</Text>
 
                     <View style={styles.taskWrapper}>
-
+                    
                         <View style={styles.items}>
                                     {/* todo tasks */}
-                                    {tasks.map((task,index)=>{
+                                   
+                                   {tasks.map((task,index)=>{
                                       return <TouchableOpacity key={index} onPress={()=>deleteItem(index)}>
                                         <Tasks text={task}/>
                                       </TouchableOpacity>
                                     })}
+                                   
                         </View>
+                        
                     </View>
               </View>
-
+              </ScrollView>
               <View style={styles.bottom}>
                 {/* write a task */}
               <KeyboardAvoidingView
@@ -127,7 +130,9 @@ add__button:{
   fontWeight:'300',
 },
 top:{
-  flex:1,
+  // flex:1,
   zIndex:-10,
+},
+bottom:{
 }
 });

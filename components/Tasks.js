@@ -37,12 +37,12 @@ const styles = StyleSheet.create({
           left:{
                     flexDirection:'row',
                     alignItems:'center',
-                    maxWidth:230,
+                    
                     flex:1,
           },
           square:{
-                    width:25,
-                    height:25,
+                    width:0.8,
+                    height:30,
                     backgroundColor:'#C0C0C0',
                     borderRadius:4,
           },
@@ -51,14 +51,7 @@ const styles = StyleSheet.create({
                     paddingLeft:20,
                     fontFamily:'monospace',
           },
-          circle:{
-                    width:15,
-                    height:15,
-                    backgroundColor:'white',
-                    borderRadius: 5,
-                    borderWidth:3,
-                    borderColor:'#DCDCDC' 
-          },
+
         });
 
 export default Tasks
